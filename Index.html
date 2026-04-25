@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <title>Happy 17th Birthday Meri Jaaaan 💕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <button class="music-btn" id="musicBtn" onclick="toggleMusic()" title="Play Music">🎵</button>
+    </div>
+    <audio id="bgMusic" loop preload="auto">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Particles Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="typewriter" id="typewriter"></h1>
+            <p class="subtitle fade-in">Miles apart but always connected heart to heart. Wishing my 17-year-old queen a day filled with love, laughter, and unforgettable moments. Happy Birthday Babyy 💌</p>
+            <div class="floating-hearts">
+                <div class="heart">❤️</div>
+                <div class="heart">💖</div>
+                <div class="heart">💕</div>
+                <div class="heart">💗</div>
+                <div class="heart">❤️</div>
+                <div class="heart">💖</div>
+            </div>
+            <button class="cta-button" id="celebrateBtn" onclick="startCelebration()">Open Your Surprise 🎉</button>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span class="scroll-text">Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section" id="countdown">
+        <div class="container">
+            <h2 class="section-title" data-aos>Our Time Together ⏳</h2>
+            <div class="countdown-grid">
+                <div class="countdown-card" data-aos>
+                    <div class="countdown-number" id="days">0</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-card" data-aos>
+                    <div class="countdown-number" id="hours">0</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-card" data-aos>
+                    <div class="countdown-number" id="minutes">0</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-card" data-aos>
+                    <div class="countdown-number" id="seconds">0</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+            <p class="countdown-message">Since the day we met online (June 2, 2025)... and counting forever until we meet in person 💍</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title" data-aos>Memories Together 📸</h2>
+            <p class="section-subtitle" data-aos>Every picture tells our beautiful story</p>
+            <div class="photo-grid">
+                <div class="photo-card" data-aos>
+                    <div class="photo-container">
+                        <img src="images/photo1.jpg" alt="Memory 1" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=400&h=400&fit=crop'">
+                        <div class="photo-overlay">
+                            <p class="photo-caption">Every moment with you is a treasure.</p>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos>
+                    <div class="photo-container">
+                        <img src="images/photo2.jpg" alt="Memory 2" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=400&h=400&fit=crop'">
+                        <div class="photo-overlay">
+                            <p class="photo-caption">You are the light of my life.</p>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos>
+                    <div class="photo-container">
+                        <img src="images/photo3.jpg" alt="Memory 3" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=400&h=400&fit=crop'">
+                        <div class="photo-overlay">
+                            <p class="photo-caption">So lucky to call you mine.</p>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos>
+                    <div class="photo-container">
+                        <img src="images/photo4.jpg" alt="Memory 4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=400&h=400&fit=crop'">
+                        <div class="photo-overlay">
+                            <p class="photo-caption">My heart beats only for you.</p>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos>
+                    <div class="photo-container">
+                        <img src="images/photo5.jpg" alt="Memory 5" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=400&h=400&fit=crop'">
+                        <div class="photo-overlay">
+                            <p class="photo-caption">Forever isn't long enough with you.</p>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card" data-aos>
+                    <div class="photo-container">
+                        <img src="images/photo6.jpg" alt="Memory 6" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=400&h=400&fit=crop'">
+                        <div class="photo-overlay">
+                            <p class="photo-caption">You are my happily ever after.</p>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Journey Timeline -->
+    <section class="journey-section" id="journey">
+        <div class="container">
+            <h2 class="section-title" data-aos>Our Journey 🗺️</h2>
+            <p class="section-subtitle" data-aos>The beautiful path that led us to each other</p>
+            <div class="timeline">
+                <div class="timeline-item" data-aos>
+                    <div class="timeline-dot">💫</div>
+                    <div class="timeline-content">
+                        <h3>First Meeting (Online)</h3>
+                        <p>June 2, 2025 - The day my world changed forever. Even through a screen, I saw you, and I knew.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos>
+                    <div class="timeline-dot">💘</div>
+                    <div class="timeline-content">
+                        <h3>First Conversation</h3>
+                        <p>Every word you typed felt like magic. I couldn't stop smiling at my phone.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos>
+                    <div class="timeline-dot">🌹</div>
+                    <div class="timeline-content">
+                        <h3>First Virtual Date</h3>
+                        <p>Distance couldn't stop our connection. Nervous, excited, and absolutely smitten.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos>
+                    <div class="timeline-dot">❤️</div>
+                    <div class="timeline-content">
+                        <h3>I Love You</h3>
+                        <p>The three most magical words I've ever said... and I meant every single one.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos>
+                    <div class="timeline-dot">💍</div>
+                    <div class="timeline-content">
+                        <h3>Coming Soon: Our First Real Meeting!</h3>
+                        <p>The countdown to the moment I finally get to hold you. I can't wait! 🥺💕</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10 Reasons I Love You -->
+    <section class="reasons-section" id="reasons">
+        <div class="container">
+            <h2 class="section-title" data-aos>10 Reasons I Love You 💝</h2>
+            <div class="reasons-grid">
+                <div class="reason-card" data-aos>
+                    <div class="reason-number">01</div>
+                    <div class="reason-icon">😊</div>
+                    <h3>Your Smile</h3>
+                    <p>Even through photos, it brightens up my darkest days.</p>
+                </div>
+                <div class="reason-card" data-aos>
+                    <div class="reason-number">02</div>
+                    <div class="reason-icon">🤗</div>
+                    <h3>Your Kindness</h3>
+                    <p>You have the most beautiful heart I've ever known.</p>
+                </div>
+                <div class="reason-card" data-aos>
+                    <div class="reason-number">03</div>
+                    <div class="reason-icon">😂</div>
+                    <h3>Your Laugh</h3>
+                    <p>It's the sweetest sound, even through voice notes.</p>
+                </div>
+                <div class="reason-card" data-aos>
+                    <div class="reason-number">04</div>
+                    <div class="reason-icon">🧠</div>
+                    <h3>Your Intelligence</h3>
+                    <p>The way your mind works amazes me every day.</p>
+                </div>
+                <div class="reason-card" data-aos>
+                    <div class="reason-number">05</div>
+                    <div class="reason-icon">💪</div>
+                    <h3>Your Strength</h3>
+                    <p>You handle this long-distance with such grace.</p>
+                </div>
+                <div class="reason-card" data-aos>
+                    <div class="reason-number">06</div>
+                    <div class="reason-icon">🎨</div>
+                    <h3>Your Uniqueness</h3>
+                    <p>There's no one else like you in this world.</p>
+                </div>
+                <div class="reason-card" data-aos>
+                    <div class="reason-number">07</div>
+                    <div class="reason-icon">🌟</div>
+                    <h3>Your Support</h3>
+                    <p>You believe in me even when I don't.</p>
+                </div>
+                <div class="reason-card" data-aos>
+                    <div class="reason-number">08</div>
+                    <div class="reason-icon">🔥</div>
+                    <h3>Your Passion</h3>
+                    <p>You put your whole heart into everything.</p>
+                </div>
+                <div class="reason-card" data-aos>
+                    <div class="reason-number">09</div>
+                    <div class="reason-icon">🏠</div>
+                    <h3>Your Love</h3>
+                    <p>You make me feel at home, no matter the distance.</p>
+                </div>
+                <div class="reason-card" data-aos>
+                    <div class="reason-number">10</div>
+                    <div class="reason-icon">∞</div>
+                    <h3>You Are You</h3>
+                    <p>Simply because you exist, my world is better.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Letter Section -->
+    <section class="message-section" id="message">
+        <div class="container">
+            <div class="message-card" data-aos>
+                <div class="message-envelope">
+                    <div class="envelope-flap">💌</div>
+                </div>
+                <h2 class="message-title">A Special Message for You</h2>
+                <div class="message-content">
+                    <p class="message-text" data-type="true">On this special day, as you turn 17, I want to remind you how much you mean to me. You are not just my girlfriend, you are my wife, my love of my life, my best friend, and my soulmate.</p>
+                    <p class="message-text" data-type="true">Even though we are miles apart right now, my love for you grows stronger every single day. Your laughter fills my days with joy, your voice gives me strength, and your messages are the highlight of my every day.</p>
+                    <p class="message-text" data-type="true">I cannot wait for the day when I can finally hold your hand, look into your eyes, and tell you "I love you" in person. Until then, know that my heart is always with you. Thank you for loving me across the distance.</p>
+                    <p class="message-signature">Happy 17th Birthday Meri Jaaan! 💕<br>Tera pati Raj hamesha tere saath hai har janam me 💗🧿</p>
+                </div>
+                <div class="message-hearts">
+                    <div class="heart-animation">💖</div>
+                    <div class="heart-animation">💗</div>
+                    <div class="heart-animation">💖</div>
+                    <div class="heart-animation">💗</div>
+                    <div class="heart-animation">💖</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Surprise Section -->
+    <section class="surprise-section" id="surprise">
+        <div class="container">
+            <div class="surprise-content" data-aos>
+                <h2 class="surprise-title">One More Thing...</h2>
+                <div class="big-heart" id="bigHeart">🎁</div>
+                <p class="surprise-text">Tap the gift above to see my final surprise for you!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-hearts">
+            <span>❤️</span><span>💖</span><span>💕</span><span>💗</span><span>❤️</span>
+        </div>
+        <p>&copy; 2026 Raj | Made with endless love for my 17-year-old queen</p>
+        <p class="footer-quote">"Distance is just a test to see how far love can travel."</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
